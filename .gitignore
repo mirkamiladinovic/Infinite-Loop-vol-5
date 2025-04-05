@@ -1,4 +1,5 @@
 *.rtf
 *.txt
+.env
 .DS_Store
 .vscode
