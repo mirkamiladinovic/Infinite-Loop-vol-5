@@ -1,0 +1,60 @@
+.container {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBarDiv {
+    position: relative;
+    width: 300px !important;
+}
+
+.searchBarDiv,
+.dropDownDiv,
+.dateTimePickerDiv,
+.itemlimitsDiv {
+    height: 40px;
+}
+
+.searchBar {
+    width: 100%;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+    height: 100%;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+}
+
+.dropDown,
+.dateTimePicker,
+.limitsMenu {
+    height: 40px;
+    padding: 3px 10px;
+}
+
+.dropDown option {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.ERROR {
+    color: red;
+}
+.INFO {
+    color: rgb(20, 181, 20);
+}
+
+.WARNING {
+    color: orange;
+}
+
+.DEBUG {
+    color: rgb(66, 156, 252);
+}

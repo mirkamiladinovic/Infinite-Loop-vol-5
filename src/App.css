@@ -1,0 +1,11 @@
+#root {
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

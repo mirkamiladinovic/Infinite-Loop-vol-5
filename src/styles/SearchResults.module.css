@@ -1,0 +1,70 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.searchResultsTable {
+    width: 100%;
+    min-width: 800px;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.searchResultsTable,
+.searchResultsTable th {
+    border: 2px solid rgb(180, 180, 180);
+    border-collapse: collapse;
+}
+
+.searchResultsTable tbody tr:nth-child(odd) {
+    background-color: rgb(110, 110, 110);
+}
+
+.time,
+.type,
+.service {
+    width: 10%;
+    min-width: 100px;
+}
+.filename {
+    width: 20%;
+    min-width: 300px;
+}
+
+.details {
+    width: 50%;
+    min-width: 700px;
+}
+
+.paginationDiv {
+    margin-top: 20px;
+}
+
+button {
+    border-radius: 25%;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+.ERROR {
+    color: red;
+}
+.INFO {
+    color: rgb(20, 181, 20);
+}
+
+.WARNING {
+    color: orange;
+}
+
+.DEBUG {
+    color: rgb(66, 156, 252);
+}
