@@ -10,7 +10,7 @@ import time
 """
 
 class Vega:
-    __slots__ = 'file'
+    __slots__ = ('file', 'limit')
     
     def __init__(self, file: str, limit: int):
         self.file = file
@@ -55,13 +55,21 @@ class Vega:
 def main() -> None:
     with open("../vegini_logovi.txt", "r") as logs:
         file = logs.readlines()
-    vega = Vega(file)
 
     root = tk.Tk()
     root.geometry("500x500")
     root.title("Vega Logovi GUI")
-
     tk.Label(root, text="Vega Log Analizator", font=("Helvetica", 16, "bold")).pack(pady=10)
+    tk.Label(frame_opts, text="Limit:").grid(row=0, column=0)
+    entry_limit = tk.Entry(frame_opts, width=5)
+    entry_limit.insert(0, "10")
+    entry_limit.grid(row=0, column=1)
+    tk.Label(frame_opts, text="Offset:").grid(row=0, column=2)
+    entry_offset = tk.Entry(frame_opts, width=5)
+    entry_offset.insert(0, "0")
+    entry_offset.grid(row=0, column=3)
+    
+    vega = Vega(file, entry_limit)
 
     tk.Button(root, text="Pisanje ERROR-a u file", command=vega.pisanje_errora, width=30).pack(pady=5)
     tk.Button(root, text="Brojanje logova", command=vega.brojanje_logova, width=30).pack(pady=5)
