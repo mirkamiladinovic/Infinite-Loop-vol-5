@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body style="background-color:bisque" text-align="center">
+    <label for="limit">Limit:</label>
+    <input type="text" id="limit" name="limit"><br><br>
+    <label for="offset">Offset:</label>
+    <input type="text" id="offset" name="offset"><br>
+    
+    <p>Sort:</p>
+    <input type="radio" id="date_sort" name="sort" value="date">
+    <label for="date_sort">Date</label><br>
+    <input type="radio" id="time_sort" name="sort" value="time">
+    <label for="time_sort">Time</label><br><br>
+
+    <label for="log_type">Choose a log type:</label>
+    <select id="log_type" name="log_type">
+        <option value="debug">DEBUG</option>
+        <option value="info">INFO</option>
+        <option value="warning">WARNING</option>
+        <option value="error">ERROR</option>
+    </select><br><br>
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search"><br><br>
+
+    <label for="stamp">Time interval:</label><br><br>
+    <label for="from">From:</label>
+    <input type="datetime-local" id="from" name="from"><br><br>
+    <label for="to">To:</label>
+    <input type="datetime-local" id="to" name="to"><br><br>
+
+    <button type="button" id="apply">Apply</button>
+
+    <script>
+
+    const limit_btn = document.getElementById("limit"); 
+    limit_btn.addEventListener('input', () => { console.log(limit_btn.value);});
+    //     l = limit_btn.value;
+    //     const fs = require('fs');
+    //     fs.readFile('vegini_logovi.txt', 'utf8', (err, data) => {
+    //     if (err) {
+    //     console.error(err);
+    //     return;
+    // }
+    // const lines = data.split('\n');
+    // lines.forEach(line => {
+    //     if (line.includes(l)) {
+    //         console.log(line);
+    //     }
+    // });
+// });
+
+//     file.close()
+//          }); 
+
+    const offset_btn = document.getElementById("offset"); 
+    offset_btn.addEventListener('input', () => { console.log(offset_btn.value); }); 
+
+    const date_sort_btn = document.getElementById("date_sort"); 
+    date_sort_btn.addEventListener('input', () => { console.log(date_sort.value); }); 
+
+    const time_sort_btn = document.getElementById("time_sort"); 
+    time_sort_btn.addEventListener('input', () => { console.log(time_sort.value); }); 
+    
+    const search_btn = document.getElementById("search"); 
+    search_btn.addEventListener('input', () => { console.log(search.value); }); 
+
+    const from_btn = document.getElementById("from"); 
+    from_btn.addEventListener('input', () => { console.log(from.value); }); 
+    
+    const to_btn = document.getElementById("to"); 
+    to_btn.addEventListener('input', () => { console.log(to.value); }); 
+
+    const apply_btn = document.getElementById("apply"); 
+    apply_btn.addEventListener('input', () => { console.log(apply.value); }); 
+
+    </script>
+</body>
+</html>
